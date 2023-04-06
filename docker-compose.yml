@@ -1,0 +1,11 @@
+version: '3.4'
+
+services:
+  openai:
+    image: openai:1.0
+    build: 
+      dockerfile: Dockerfile
+    environment:
+      - OPENAI_API_KEY=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
+    ports:
+      - 5000:5000
