@@ -1,20 +1,33 @@
 <!DOCTYPE html>
+<html lang="en">
+
 <head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>OpenAI Quickstart</title>
+  <!-- Tab icon -->
   <link
     rel="shortcut icon"
     href="{{ url_for('static', filename='dog.png') }}"
   />
+  <!-- Stylesheet -->
   <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}" />
 </head>
 
 <body>
+  <!-- Static dog image -->
   <img src="{{ url_for('static', filename='dog.png') }}" class="icon" />
   <h3>Name my pet</h3>
+  <!-- Input field and submit button, defining the submit action as a post request-->
   <form action="/" method="post">
+    <!-- Input field -->
     <input type="text" name="animal" placeholder="Enter an animal" required />
+    <!-- Submit button -->
     <input type="submit" value="Generate names" />
   </form>
+  
+  <!-- If result is defined, display it in a div-->
   {% if result %}
   <div class="result">{{ result }}</div>
   {% endif %}
