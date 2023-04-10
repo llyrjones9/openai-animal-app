@@ -1,44 +1,23 @@
 # OpenAI API Quickstart - Python example app
+This is an example Flask app cloned from a repository belonging to OpenAI, changes have been made to OpenAI's version to allow for easier running of the app and containerisation.
 
-This is an example pet name generator app used in the OpenAI API [quickstart tutorial](https://beta.openai.com/docs/quickstart). It uses the [Flask](https://flask.palletsprojects.com/en/2.0.x/) web framework. Check out the tutorial or follow the instructions below to get set up.
+Upon navigating to the base URL the user should enter an animal, the page will then generate 3 suggested super hero names for that animal using the OpenAI models via their API.
 
-## Setup
+OpenAI created this repository as a use case for the OpenAI API suite, however in this case the repository has been restructured and modified. The repository now serves as a wider template for building and containerising a flask application.
 
-1. If you don’t have Python installed, [install it from here](https://www.python.org/downloads/).
+# Setup
+In both cases you will need to create an OpenAI account and retrieve your API key for using OpenAI's API suite.
 
-2. Clone this repository.
+## Running via local Python installation
+1. Set your API key as an environmental variable under the name `OPENAI_API_KEY`
+2. Install the `requirements.txt` contents into your Python installation or virtual environment
+3. Navigate to the `flaskr` directory
+4. Run `app.py`
 
-3. Navigate into the project directory:
+## Running via local Docker Container
+1. Add your API key to the `docker-compose.yml` file
+2. Make sure your Docker Daemon is running
+3. Run the command `docker-compose up` in your terminal from the repository's route
 
-   ```bash
-   $ cd openai-quickstart-python
-   ```
-
-4. Create a new virtual environment:
-
-   ```bash
-   $ python -m venv venv
-   $ . venv/bin/activate
-   ```
-
-5. Install the requirements:
-
-   ```bash
-   $ pip install -r requirements.txt
-   ```
-
-6. Make a copy of the example environment variables file:
-
-   ```bash
-   $ cp .env.example .env
-   ```
-
-7. Add your [API key](https://beta.openai.com/account/api-keys) to the newly created `.env` file.
-
-8. Run the app:
-
-   ```bash
-   $ flask run
-   ```
-
-You should now be able to access the app at [http://localhost:5000](http://localhost:5000)! For the full context behind this example app, check out the [tutorial](https://beta.openai.com/docs/quickstart).
+# Contribute
+This project is not in activate development, however use cases for flask and OpenAI's large language models are vast therefore building out the app with additional features is a good place to start. 
