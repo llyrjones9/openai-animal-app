@@ -11,7 +11,7 @@ services:
       dockerfile: Dockerfile
     # Set env variables
     environment:
-      - OPENAI_API_KEY=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
+      - OPENAI_API_KEY=
     # Map ports
     ports:
       - 5000:5000
