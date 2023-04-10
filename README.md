@@ -1,4 +1,4 @@
-# OpenAI API Quickstart - Python example app
+# OpenAI API Animal Superhero Name Generation App
 This is an example Flask app cloned from a repository belonging to OpenAI, changes have been made to OpenAI's version to allow for easier running of the app and containerisation.
 
 Upon navigating to the base URL the user should enter an animal, the page will then generate 3 suggested super hero names for that animal using the OpenAI models via their API.
